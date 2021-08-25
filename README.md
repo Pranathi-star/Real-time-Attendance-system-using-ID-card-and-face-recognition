@@ -1,7 +1,5 @@
-# Real-time-Attendance-system-using-ID-card-and-face-recognition
+# Real-time-Attendance-system-using-ID-card-and-face-recognition-for-CBIT
 Mini Project for semester 5.
-
-## **Real-time-Attendance-system-using-ID-card-and-face-recognition for CBIT**
 
 #### Steps to run it on your system using the Windows Command Prompt:
 

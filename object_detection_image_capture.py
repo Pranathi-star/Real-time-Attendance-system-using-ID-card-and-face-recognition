@@ -7,7 +7,7 @@ from PIL import Image
 from object_detection_ocr import *
 cam = cv2.VideoCapture(0)
 
-cv2.namedWindow("test")
+cv2.namedWindow("ID Card Capture")
 
 img_counter = 0
 
@@ -16,7 +16,7 @@ while True:
     if not ret:
         print("failed to grab frame")
         break
-    cv2.imshow("test", frame)
+    cv2.imshow("ID Card Capture", frame)
 
     k = cv2.waitKey(1)
     if k%256 == 27:

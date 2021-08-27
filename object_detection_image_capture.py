@@ -25,7 +25,7 @@ while True:
         break
     elif k%256 == 32:
         # SPACE pressed
-        img_name = "opencv_frame_{}.png".format(img_counter)
+        img_name = "object_detection_gen_images/opencv_frame_{}.png".format(img_counter)
         cv2.imwrite(img_name, frame)
         print("{} written!".format(img_name))
         img_counter += 1
@@ -90,8 +90,8 @@ yy = [contour[maxa_ind][i][0][1] for i in range(len(contour[maxa_ind]))]
 #storing output for method 3
 
 roi = img_name[min(xx): min(xx) + max(xx), min(yy): min(yy) + max(yy)]
-cv2.imwrite('Image_crop.jpg', roi)
-image = cv2.imread("C:/Users/prana/OneDrive/Desktop/web_dev/ocr_trial/Image_crop.jpg")
+cv2.imwrite('object_detection_gen_images/Image_crop.jpg', roi)
+image = cv2.imread("C:/Users/prana/OneDrive/Desktop/web_dev/ocr_trial/object_detection_gen_images/Image_crop.jpg")
 
 # plt.figure()
 # plt.imshow(img_name)

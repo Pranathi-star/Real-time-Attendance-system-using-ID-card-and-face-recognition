@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<center>
+<h1 style="color: #fff"> ID Card Detector </h1>
+<form method="post" action="{{ url_for('tasks') }}">
+    <input type="submit" value="Capture" name="click"/>
+</form>
+<img id = "bg" src="{{ url_for('video_feed') }}" width="100%" alt="User Image">
+<br>
+<a style="color: #fff" href="{{url_for('success') }}">Submit here</a>
+</center>
+{% endblock %}

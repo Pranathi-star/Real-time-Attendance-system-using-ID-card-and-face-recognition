@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<section class="page-section clearfix">
+    <div class="container">
+      <div class="intro">
+        <!-- <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{url_for('static', filename='main_mask.gif')}}" alt=""> -->
+        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
+          <h2 class="section-heading mb-4">
+            <span class="section-heading-upper">ID Card Detection</span>
+            <span class="section-heading-lower"></span>
+          </h2>
+          <p class="mb-3">You have to stand in front of the camera and within 5 seconds it will detect your ID.
+            <br><b>Click on ID Detector below</b></br>
+          </p>
+          <div class="intro-button mx-auto">
+              <a class="btn btn-primary btn-xl" href="{{url_for('check')}}">Detect ID Card</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="page-section cta">
+    <div class="container">
+      <div class="row">
+        <div class="col-xl-9 mx-auto">
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="static/vendor/jquery/jquery.min.js"></script>
+  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+{% endblock %}

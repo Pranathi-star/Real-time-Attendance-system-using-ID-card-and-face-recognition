@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+<p style="color: #fff"> Your roll number has been identified as {{ res }}. Press Next to proceed to step 2. </p>
+<a style="color: #fff" href="{{url_for('check_face') }}">Next</a>
+</center>
+{% endblock %}

@@ -2,11 +2,11 @@
 {% block content %}
 <center>
 <h1 style="color: #fff"> ID Card Detector </h1>
-<form method="post" action="{{ url_for('tasks') }}">
+<form method="post" action="{{ url_for('id_save') }}">
     <input type="submit" value="Capture" name="click"/>
 </form>
-<img id = "bg" src="{{ url_for('video_feed') }}" width="100%" alt="User Image">
+<img id = "bg" src="{{ url_for('video_feed_id') }}" width="50%" height = "50%" alt="User Image">
 <br>
-<a style="color: #fff" href="{{url_for('success') }}">Submit here</a>
+<a style="color: #fff" href="{{url_for('success_id') }}">Next</a>
 </center>
 {% endblock %}

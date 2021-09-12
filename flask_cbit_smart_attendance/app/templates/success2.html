@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<center>
+{% set list1 = res.split(',') %}
+<p style="color: #fff"> Your roll number has been identified as {{ list1[0] }} from the ID card. Your roll number has been identified as {{ list1[1] }} using face recognition. Your attendance has been marked in the database. Have a nice day!</p>
+</center>
+{% endblock %}

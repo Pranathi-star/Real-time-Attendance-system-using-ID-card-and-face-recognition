@@ -1,7 +1,7 @@
 # Real-time-Attendance-system-using-ID-card-and-face-recognition-for-CBIT
 Mini Project for semester 5.
 
-#### Steps to run it on your system using the Windows Command Prompt:
+#### Steps to run it on your local system using the Windows Command Prompt:
 
 1. (optional but recommended) Create a virtual environment and activate it using 
 
@@ -25,11 +25,22 @@ $ cd Real-time-Attendance-system-using-ID-card-and-face-recognition
 4. Install the required dependencies using
 
 ```
-$ pip install -r requirements.txt
+$ pip install -r requirements.txt --use-deprecated=legacy-resolver
 ```
 
-5. Run the image processing file using
+5. Set the Flask app as run.py using
 
 ```
-$ python real_time_image_detection.py
+$ set FLASK_APP = run.py
+```
+
+6. (for development purposes) Set the project on debug mode using
+
+```
+$ set FLASK_DEBUG = 1
+```
+7. Run the project!
+
+```
+$ flask run
 ```

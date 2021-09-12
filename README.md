@@ -28,18 +28,24 @@ $ cd Real-time-Attendance-system-using-ID-card-and-face-recognition
 $ pip install -r requirements.txt --use-deprecated=legacy-resolver
 ```
 
-5. Set the Flask app as run.py using
+5. Move into the flask project directory using 
+
+```
+$ cd flask_cbit_smart_attendance
+```
+
+6. Set the Flask app as run.py using
 
 ```
 $ set FLASK_APP = run.py
 ```
 
-6. (for development purposes) Set the project on debug mode using
+7. (for development purposes) Set the project on debug mode using
 
 ```
 $ set FLASK_DEBUG = 1
 ```
-7. Run the project!
+8. Run the project!
 
 ```
 $ flask run

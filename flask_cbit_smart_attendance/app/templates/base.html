@@ -40,7 +40,6 @@
         {% endif %}
     </head>
     <body>
-        <!--<h1>MaskifAI</h1>-->
         <h1 class="site-heading text-center text-white d-none d-lg-block">
             <span class="site-heading-lower">CBIT Smart Attendance</span>
             <span class="site-heading-upper text-primary mb-3">A smart attendance portal with 2 layer security.</span>
@@ -58,7 +57,10 @@
                 <ul class="navbar-nav mx-auto">
                 <li class="nav-item active px-lg-4">
                     <a class="nav-link text-uppercase text-expanded" href="{{url_for('index')}}">Home
-                    <span class="sr-only">(current)</span>
+                    </a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{{url_for('login')}}">Admin Login
                     </a>
                 </li>
                 </ul>
@@ -66,11 +68,7 @@
             </div>
         </nav>
         {% block content %} {% endblock %}
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
   <footer class="footer text-faded text-center py-5">
     <div class="container">
       <p class="m-0 small">Copyright &copy; CBIT Smart Attendance 2021</p>

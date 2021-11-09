@@ -4,8 +4,8 @@
         <form method="POST" action="">
             {{ form.hidden_tag() }}
             <fieldset class="form-group">
-                <legend class="border-bottom mb-4">Log In</legend>
-                <div class="form-group">
+                <legend class="border-bottom mb-4" style="color: #ffffff;">Log In</legend>
+                <div class="form-group" style="color: #ffffff;">
                     {{ form.email.label(class="form-control-label") }}
                     {% if form.email.errors %}
                         {{ form.email(class="form-control form-control-lg is-invalid") }}
@@ -18,7 +18,7 @@
                         {{ form.email(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
-                <div class="form-group">
+                <div class="form-group" style="color: #ffffff;">
                     {{ form.password.label(class="form-control-label") }}
                     {% if form.password.errors %}
                         {{ form.password(class="form-control form-control-lg is-invalid") }}
@@ -31,16 +31,16 @@
                         {{ form.password(class="form-control form-control-lg") }}
                     {% endif %}
                 </div>
-                <div class="form-check">
+                <div class="form-check" style="color: #ffffff;">
                     {{ form.remember(class="form-check-input") }}
                     {{ form.remember.label(class="form-check-label") }}
                 </div>
             </fieldset>
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-info") }}
+                {{ form.submit(class="btn btn-outline-warning") }}
             </div>
             <small class="text-muted ml-2">
-                <a href="#">Forgot Password?</a>
+                <a href="#" style="color: #ffffff;">Forgot Password?</a>
             </small>
         </form>
     </div>

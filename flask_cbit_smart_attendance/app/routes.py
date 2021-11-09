@@ -30,6 +30,10 @@ def index():
 def check_id():
     return render_template('id_capture.html')
 
+@app.route("/att_sheet", methods=['GET', 'POST'])
+def att_sheet():
+    return render_template('att_sheet.html')
+
 @app.route("/login", methods=['GET', 'POST'])
 def login():
     form = LoginForm()
@@ -38,7 +42,7 @@ def login():
         if user and user.password == form.password.data:
             login_user(user, remember=form.remember.data)
             next_page = request.args.get('next')
-            return redirect(next_page) if next_page else redirect(url_for('index'))
+            return redirect(next_page) if next_page else redirect(url_for('att_sheet'))
         else:
             flash('Login Unsuccessful. Please check email and password', 'danger')
     return render_template('login.html', title='Login', form=form)
@@ -88,7 +92,7 @@ def gen_id():
 def video_feed_id():
     return Response(gen_id(), mimetype = 'multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/success_id')
+@app.route('/success_id', methods=['POST', 'GET'])
 @login_required
 def success_id():
     image = cv2.imread("C:/Users/prana/OneDrive/Desktop/web_dev/ocr_trial/flask_cbit_smart_attendance/app/idshot0.png")
@@ -97,7 +101,7 @@ def success_id():
     roll_num1 = Id.get_id_image(image)
     return render_template('success1.html', res = roll_num1)
 
-@app.route('/check_face')
+@app.route('/check_face', methods=['POST', 'GET'])
 @login_required
 def check_face():
     return render_template('face_capture.html')
@@ -141,12 +145,13 @@ def gen_face():
 def video_feed_face():
     return Response(gen_face(), mimetype = 'multipart/x-mixed-replace; boundary=frame')
 
-@app.route('/success_face')
+@app.route('/success_face', methods=['POST', 'GET'])
+@login_required
 def success_face():
     # image = cv2.imread("C:/Users/prana/OneDrive/Desktop/web_dev/ocr_trial/flask_cbit_smart_attendance/faceshot0.png")
     Face = FaceCapture()
     global roll_num2
     roll_num2 = Face.detect_face()
-    att = Attendance(roll_num1, roll_num2)
+    att = Attendance(str(roll_num1), str(roll_num2))
     att.add_att()
     return render_template('success2.html', res = str(roll_num1) + "," + str(roll_num2))

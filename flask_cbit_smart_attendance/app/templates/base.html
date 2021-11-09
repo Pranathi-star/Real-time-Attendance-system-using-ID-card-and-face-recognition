@@ -31,7 +31,10 @@
                 right: 10px; 
                 
             }
-
+            body {
+  background-color: #161E54;
+}
+            
         </style>
         {% if title %}
         <title> CBIT Smart Attendance -- {{ title }} </title>
@@ -40,7 +43,7 @@
         {% endif %}
     </head>
     <body>
-        <h1 class="site-heading text-center text-white d-none d-lg-block">
+            <h1 class="site-heading text-center d-none text-white  d-lg-block">
             <span class="site-heading-lower">CBIT Smart Attendance</span>
             <span class="site-heading-upper text-primary mb-3">A smart attendance portal with 2 layer security.</span>
         </h1>
@@ -53,6 +56,24 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
+            {% if current_user.is_authenticated %}
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav mx-auto">
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{{url_for('index')}}">Home
+                    </a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{{url_for('logout')}}">Admin Logout
+                    </a>
+                </li>
+                <li class="nav-item active px-lg-4">
+                    <a class="nav-link text-uppercase text-expanded" href="{{url_for('att_sheet')}}">Download Attendance
+                    </a>
+                </li>
+                </ul>
+            </div>
+            {% else %}
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav mx-auto">
                 <li class="nav-item active px-lg-4">
@@ -65,6 +86,7 @@
                 </li>
                 </ul>
             </div>
+            {% endif %}
             </div>
         </nav>
         {% block content %} {% endblock %}

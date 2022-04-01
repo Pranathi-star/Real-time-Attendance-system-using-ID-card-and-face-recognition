@@ -1,4 +1,4 @@
-/*!
+/*
  * Start Bootstrap - Business Casual v5.0.10 (https://startbootstrap.com/themes/business-casual)
  * Copyright 2013-2020 Start Bootstrap
  * Licensed under MIT (https://github.com/StartBootstrap/startbootstrap-business-casual/blob/master/LICENSE)
@@ -6,10 +6,11 @@
 
 body {
   font-family: 'Lora';
-  background-image: linear-gradient(#ffffff, #ffffff), url("../img/bg.jpg");
+  /* background-image: linear-gradient(#ffffff, #ffffff), url("../img/bg.jpg"); */
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
+  background-color: #694E4E;
 }
 
 h1,
@@ -80,7 +81,7 @@ p {
 }
 
 #mainNav .navbar-brand {
-  color: #e6a756;
+  color: #F3C5C5;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link {
@@ -89,7 +90,7 @@ p {
 }
 
 #mainNav .navbar-nav .nav-item.active .nav-link {
-  color: #e6a756;
+  color: #F3C5C5;
 }
 
 @media (min-width: 992px) {
@@ -100,7 +101,7 @@ p {
     color: rgba(255, 255, 255, 0.4);
   }
   #mainNav .navbar-nav .nav-item.active .nav-link:hover {
-    color: #e6a756;
+    color: #F3C5C5;
   }
 }
 
@@ -145,7 +146,7 @@ p {
 .cta {
   padding-top: 5rem;
   padding-bottom: 5rem;
-  background-color: rgba(230, 167, 86, 0.9);
+  background-color: #F3C5C5;
 }
 
 .cta .cta-inner {
@@ -203,7 +204,7 @@ p {
 }
 
 .list-hours .list-hours-item {
-  border-bottom: 1px solid rgba(230, 167, 86, 0.5);
+  border-bottom: 1px solid #F3C5C5;
   padding-bottom: .25rem;
   margin-bottom: 1rem;
   font-style: italic;
@@ -211,7 +212,7 @@ p {
 
 .list-hours .list-hours-item.today {
   font-weight: bold;
-  color: #e6a756;
+  color: #F3C5C5;
 }
 
 @media (min-width: 992px) {
@@ -230,11 +231,11 @@ p {
 }
 
 .text-primary {
-  color: #e6a756 !important;
+  color: #F3C5C5 !important;
 }
 
 .bg-primary {
-  background-color: #e6a756 !important;
+  background-color: #F3C5C5 !important;
 }
 
 .btn {
@@ -242,13 +243,13 @@ p {
 }
 
 .btn-primary {
-  background-color: #e6a756;
-  border-color: #e6a756;
+  background-color: #F3C5C5;
+  border-color: #F3C5C5;
 }
 
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
-  background-color: #df902a;
-  border-color: #df902a;
+  background-color: #F3C5C5;
+  border-color: #F3C5C5;
 }
 
 .font-weight-light {

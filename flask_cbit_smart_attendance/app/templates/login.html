@@ -1,5 +1,6 @@
-{% extends "base.html" %}
+{% extends "base1.html" %}
 {% block content %}
+<br><br><br><br><br><br><br><br>
     <div class="content-section">
         <form method="POST" action="">
             {{ form.hidden_tag() }}
@@ -37,7 +38,7 @@
                 </div>
             </fieldset>
             <div class="form-group">
-                {{ form.submit(class="btn btn-outline-warning") }}
+                {{ form.submit(class="btn btn-outline-light") }}
             </div>
             <small class="text-muted ml-2">
                 <a href="#" style="color: #ffffff;">Forgot Password?</a>

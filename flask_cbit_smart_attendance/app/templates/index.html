@@ -1,32 +1,141 @@
-{% extends "base.html" %}
-
+{% extends "base1.html" %}
 {% block content %}
-
-<section class="page-section clearfix" >
-    <div class="container">
-      <div class="intro">
-        <!-- <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{url_for('static', filename='main_mask.gif')}}" alt=""> -->
-        <div class="intro-text left-0 text-center bg-faded p-5 rounded">
-          <h2 class="section-heading mb-4">
-            <span class="section-heading-upper">ID Card Detection</span>
-            <span class="section-heading-lower"></span>
-          </h2>
-          <p class="mb-3">You have to stand in front of the camera and click the Capture button and if satisfied by the image, click on Submit.
-            <br><b>Click on ID Detector below</b></br>
-          </p>
-          <div class="intro-button mx-auto">
-              <a class="btn btn-primary btn-xl" href="{{url_for('check_id')}}">Detect ID Card</a>
+<!--hero header-->
+<section class="py-7 py-md-0 bg-hero" id="home">
+  <div class="container">
+      <div class="row vh-md-100">
+          <div class="col-md-8 col-sm-10 col-12 mx-auto my-auto text-center">
+              <h1 class="heading-black text-capitalize">SmAtt - Smart Attendance</h1>
+              <p class="lead py-3">SmAtt is a platform that enables teachers to automate the attendance process.</p>
+              <form method="get" action="{{url_for('check_id') }}">
+                <button class="btn btn-primary d-inline-flex flex-row align-items-center">
+                    Get started now
+                    <em class="ml-2" data-feather="arrow-right"></em>
+                </button>
+            </form>
+              
           </div>
-        </div>
       </div>
+  </div>
+</section>
+
+<!-- features section -->
+<section class="pt-6 pb-7" id="features">
+  <div class="container">
+      <div class="row mt-6">
+        <div class="col-md-6 mr-auto">
+            <h2>SmAtt is more than just automated attendance.</h2>
+            <p class="mb-5">SmAtt enables proxy-free attendance using 2 level verification.</p>
+            <a href="{{url_for('check_id')}}" class="btn btn-light">
+                Try the live demo
+            </a>
+        </div>
+        <div class="col-md-5">
+            <div class="slick-about">
+                <img src="{{ url_for('static', filename='img/stu1.jpg') }}" class="img-fluid rounded d-block mx-auto" alt="Work 1"/>
+                <img src="{{ url_for('static', filename='img/stu2.jfif') }}" class="img-fluid rounded d-block mx-auto" alt="Work 2"/>
+                <img src="{{ url_for('static', filename='img/stu3.jpg') }}" class="img-fluid rounded d-block mx-auto" alt="Work 3"/>
+            </div>
+        </div>
     </div>
-  </section>
+    <br><br><br><br><br><br><br>
+    <div class="row">
+        <div class="col-md-6 mx-auto text-center">
+            <h2 class="heading-black">Using SmAtt is easy!</h2>
+            <p class="text-muted lead">SmAtt not only automates the attendance process but is also very easy to use. There are just 4 steps.</p>
+        </div>
+    </div>
+      <div class="row mt-5">
+          <div class="col-md-10 mx-auto">
+              <div class="row feature-boxes">
+                  <div class="col-md-6 box">
+                      <div class="icon-box box-primary">
+                          <div class="icon-box-inner">
+                              <span data-feather="edit-3" width="35" height="35"></span>
+                          </div>
+                      </div>
+                      <h5>Step 1</h5>
+                      <p class="text-muted">Visit the website.</p>
+                  </div>
+                  <div class="col-md-6 box">
+                      <div class="icon-box box-success">
+                          <div class="icon-box-inner">
+                              <span data-feather="monitor" width="35" height="35"></span>
+                          </div>
+                      </div>
+                      <h5>Step 2</h5>
+                      <p class="text-muted">Capture the photograph of your ID Card.</p>
+                  </div>
+                  <div class="col-md-6 box">
+                      <div class="icon-box box-danger">
+                          <div class="icon-box-inner">
+                              <span data-feather="layout" width="35" height="35"></span>
+                          </div>
+                      </div>
+                      <h5>Step 3</h5>
+                      <p class="text-muted">Capture your face in the face recognition software.</p>
+                  </div>
+                  <div class="col-md-6 box">
+                      <div class="icon-box box-info">
+                          <div class="icon-box-inner">
+                              <span data-feather="globe" width="35" height="35"></span>
+                          </div>
+                      </div>
+                      <h5>Step 4</h5>
+                      <p class="text-muted">Attendance has been captured.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      
+  </div>
+</section>
 
-  <img src="https://www.cbit.ac.in/wp-content/themes/CBIT/images/logo.png" alt="logo" width="600" height="300" style="position: absolute; top: 290px; left: 850px;">
-
-
-  <!-- Bootstrap core JavaScript -->
-  <script src="static/vendor/jquery/jquery.min.js"></script>
-  <script src="static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-
-{% endblock %}
+<!--faq section-->
+<section class="py-7" id="faq">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-6 mx-auto text-center">
+              <h2>Frequently asked questions</h2>
+              <p class="text-muted lead">Answers to most common questions.</p>
+          </div>
+      </div>
+      <div class="row mt-5">
+          <div class="col-md-10 mx-auto">
+              <div class="row">
+                  <div class="col-md-6 mb-5">
+                      <h6>How does it prevent attendance from another location other than school?</h6>
+                      <p class="text-muted">The admin login feature prevents access to the website without authentication.</p>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                      <h6>How does it prevent proxy attendance?</h6>
+                      <p class="text-muted">The 2 level verification ie. ID Card roll number and face recognition prevents proxy attendance.</p>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                      <h6>What are the payment methods you accept?</h6>
+                      <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                      <h6>How often do you release updates?</h6>
+                      <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                      <h6>What is your refund policy?</h6>
+                      <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                  </div>
+                  <div class="col-md-6 mb-5">
+                      <h6>How can I contact you?</h6>
+                      <p class="text-muted">Nam liber tempor cum soluta nobis eleifend option congue nihil imper per tem por legere me doming.</p>
+                  </div>
+              </div>
+          </div>
+      </div>
+      <div class="row mt-4">
+          <div class="col-md-6 mx-auto text-center">
+              <h5 class="mb-4">Have questions?</h5>
+              <a href="#" class="btn btn-primary">Contact us</a>
+          </div>
+      </div>
+  </div>
+</section>
+{% endblock content %}

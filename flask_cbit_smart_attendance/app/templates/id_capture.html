@@ -1,15 +1,16 @@
-{% extends "base.html" %}
+{% extends "base1.html" %}
 {% block content %}
 <center>
+    <br><br><br><br>
 <h1 style="color: #fff"> ID Card Detector </h1>
 <img id = "bg" src="{{ url_for('video_feed_id') }}" width="50%" height = "50%" alt="User Image">
 <br><br><br>
 <div>
     <form method="post" action="{{ url_for('id_save') }}">
-        <button type="submit" value="Capture" name="click" class="btn btn-outline-warning">Capture</button>
+        <button type="submit" value="Capture" name="click" class="btn btn-outline-light">Capture</button>
     </form>
     <form method="post" action="{{url_for('success_id') }}">
-        <button type="submit" value="Next" name="click" class="btn btn-outline-warning">Next</button>
+        <button type="submit" value="Next" name="click" class="btn btn-outline-light">Next</button>
     </form>
 </div>
 </center>

@@ -43,7 +43,7 @@ $ set FLASK_APP = run.py
 7. (for development purposes) Set the project on debug mode using
 
 ```
-$ set FLASK_DEBUG = 1
+$ set FLASK_ENV=development
 ```
 8. Run the project!
 

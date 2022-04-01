@@ -22,16 +22,16 @@ $ git clone https://github.com/Pranathi-star/Real-time-Attendance-system-using-I
 $ cd Real-time-Attendance-system-using-ID-card-and-face-recognition
 ```
 
-4. Install the required dependencies using
-
-```
-$ pip install -r requirements.txt --use-deprecated=legacy-resolver
-```
-
-5. Move into the flask project directory using 
+4. Move into the flask project directory using 
 
 ```
 $ cd flask_cbit_smart_attendance
+```
+
+5. Install the required dependencies using
+
+```
+$ pip install -r requirements.txt --use-deprecated=legacy-resolver
 ```
 
 6. Set the Flask app as run.py using

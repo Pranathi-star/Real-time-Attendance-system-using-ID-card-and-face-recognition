@@ -45,8 +45,11 @@ $ set FLASK_APP = run.py
 ```
 $ set FLASK_ENV=development
 ```
-8. Run the project!
+8. Set up the database and create an Admin for the portal using the steps mentioned in the image below.
 
+![image](https://drive.google.com/file/d/1x5OatE8K8rGUbeAkwu2er-Oq8cEUBTUL/view?usp=sharing)
+
+9. Run the project!
 ```
 $ flask run
 ```

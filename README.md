@@ -47,7 +47,7 @@ $ set FLASK_ENV=development
 ```
 8. Set up the database and create an Admin for the portal using the steps mentioned in the image below.
 
-![Steps to setup the db](https://drive.google.com/file/d/1x5OatE8K8rGUbeAkwu2er-Oq8cEUBTUL/view?usp=sharing)
+![Steps to setup the db](https://drive.google.com/drive/folders/1eQUDyC0tOesSah0dZ0Bv6cmxUFetZlNr?usp=sharing)
 
 9. Run the project!
 ```
